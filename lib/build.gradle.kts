@@ -1,0 +1,23 @@
+plugins {
+    kotlin("jvm") version "1.9.0"
+}
+
+group = "org.komputing.kbms"
+version = "0.1"
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    testImplementation(kotlin("test"))
+    testImplementation("com.google.truth:truth:1.1.4")
+}
+
+tasks.test {
+    useJUnitPlatform()
+}
+
+kotlin {
+    jvmToolchain(11)
+}
