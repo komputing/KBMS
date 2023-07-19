@@ -3,9 +3,6 @@ plugins {
     `maven-publish`
 }
 
-group = "org.komputing.kbms"
-version = "0.2"
-
 repositories {
     mavenCentral()
 }
@@ -21,4 +18,16 @@ tasks.test {
 
 kotlin {
     jvmToolchain(11)
+}
+
+publishing {
+    publications {
+        create<MavenPublication>("maven") {
+            groupId = "org.komputing.kbms"
+            artifactId = "library"
+            version = "0.2"
+
+            from(components["java"])
+        }
+    }
 }
