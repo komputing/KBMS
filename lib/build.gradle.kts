@@ -25,7 +25,7 @@ publishing {
         create<MavenPublication>("maven") {
             groupId = "org.komputing.kbms"
             artifactId = "library"
-            version = "0.2"
+            version = "0.3"
 
             from(components["java"])
         }
